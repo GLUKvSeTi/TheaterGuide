@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/GrubHub.iml" filepath="$PROJECT_DIR$/.idea/GrubHub.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/TheaterGuide.iml" filepath="$PROJECT_DIR$/.idea/TheaterGuide.iml" />
     </modules>
   </component>
 </project>
