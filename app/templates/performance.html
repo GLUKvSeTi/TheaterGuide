@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Theater Performance</title>
+</head>
+<body>
+    <h1>Recomended Theater Performance</h1>
+    {% if performance %}
+        <p><strong>Название:</strong> {{ performance.title }}</p>
+        <p><strong>Описание:</strong> {{ performance.description }}</p>
+        <p><strong>Театр:</strong> {{ performance.theater_name }}</p>
+        <p><strong>Дата:</strong> {{ performance.date }}</p>
+        <p><strong>Время:</strong> {{ performance.time }}</p>
+    {% else %}
+        <p>No performances available at the moment.</p>
+    {% endif %}
+    <button onclick="window.location.reload()">Получить рекомендацию</button>
+</body>
+</html>

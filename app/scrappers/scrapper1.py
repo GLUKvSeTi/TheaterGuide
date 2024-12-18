@@ -4,7 +4,6 @@ from sqlalchemy.orm import Session
 from typing import Annotated
 from sqlalchemy import insert, select, update
 
-from slugify import slugify
 from app.backend.db_depends import get_db
 from app.schemas import CreateEvent
 from app.models import Event
@@ -37,7 +36,6 @@ def parse_tt_afisha():
                                       description=description)
 
                     db.add(new_event)
-                    db.commit()
                     events.append({
                         'title': title,
                         'date': date,
@@ -50,11 +48,8 @@ def parse_tt_afisha():
 
                 except AttributeError as e:
                     print(f'Ошибка при извлечении данных для одного из концертов: {e}')
-
+        db.commit()
         db.close()
         return events
 
 
-events = parse_tt_afisha()
-for event in events:
-    print(event)

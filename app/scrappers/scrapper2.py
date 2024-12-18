@@ -36,17 +36,12 @@ def parse_tuz_afisha():
                                   description=description)
 
                 db.add(new_event)
-                db.commit()
                 events.append({
                     'title': title,
                     'description': description,
                     'date': date,
                     'time': time
                 })
+        db.commit()
         db.close()
         return events
-
-
-events = parse_tuz_afisha()
-for event in events:
-    print(event)
