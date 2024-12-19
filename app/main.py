@@ -6,8 +6,7 @@ from fastapi import APIRouter, Depends, status, HTTPException, Request
 from sqlalchemy.orm import Session
 from typing import Annotated
 from sqlalchemy import insert, select, update, func
-from urllib3 import request
-from fastapi.responses import HTMLResponse
+
 
 from app.backend.db_depends import get_db
 from fastapi.templating import Jinja2Templates
